@@ -7,4 +7,4 @@ build export dev:
 publish:
 	$(MAKE) export
 	touch out/.nojekyll
-	yarn gh-pages -d out -b master
+	yarn gh-pages -d out -b master -a
