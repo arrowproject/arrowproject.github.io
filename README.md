@@ -1,5 +1,5 @@
 ```
-% yarn
-% yarn build
-% yarn export
+% make
+% make build
+% make export
 ```
