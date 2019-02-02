@@ -20,23 +20,24 @@ function More(props) {
   let title = (props.title || "learn more") + " →";
   return (
     <div style={style}>
-      <Link href={props.href}><a>{title}</a></Link>
+      <Link href={props.href}>
+        <a>{title}</a>
+      </Link>
     </div>
   );
 }
 
-function Header({ children, href, title }) {
-  let style = {};
-  let styleText = {
-    display: "inline",
+function Header({ className, style, children, href, title }) {
+  style = {
     fontSize: "28pt",
     textTransform: "uppercase",
     color: colors.textTitle,
-    fontWeight: "900"
+    fontWeight: "900",
+    ...style
   };
   return (
-    <div style={style}>
-      <div style={styleText}>{children}</div>
+    <div className={className} style={style}>
+      {children}
     </div>
   );
 }
@@ -53,12 +54,78 @@ function Section({ title, children, href, hrefTitle }) {
     marginTop: 20
   };
   return (
+    <div className="section" style={style}>
+      <style jsx>{`
+        .section {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .header {
+        }
+
+        @media (min-width: 800px) {
+          .section {
+            flex-direction: row;
+          }
+          .header {
+            display: flex;
+            flex-direction: row-reverse;
+            flex-shrink: 0;
+            width: 300px;
+            padding: 15px 25px;
+          }
+        }
+      `}</style>
+      <div className="header">
+        <Header>
+          <Link href={href}>
+            <a>{title}</a>
+          </Link>
+        </Header>
+      </div>
+      <div>
+        <Content style={styleBody}>{children}</Content>
+        {href && <More href={href} title={hrefTitle} />}
+      </div>
+    </div>
+  );
+}
+
+function ProjectInfo({ title, children }) {
+  let style = {
+    marginBottom: "1em"
+  };
+  let styleTitle = {
+    marginBottom: "0.5em",
+    fontSize: "18pt",
+    textTransform: "uppercase",
+    color: colors.textTitle,
+    fontWeight: "900"
+  };
+  let styleBody = {
+    fontSize: "14pt",
+    color: colors.textTitle,
+    fontWeight: "500"
+  };
+  return (
     <div style={style}>
-      <Header href={href} title={hrefTitle}>
-        {title}
-      </Header>
-      <Content style={styleBody}>{children}</Content>
-      {href && <More href={href} title={hrefTitle} />}
+      <div style={styleTitle}>{title}</div>
+      <div style={styleBody}>{children}</div>
+    </div>
+  );
+}
+
+function Projects() {
+  let style = {
+    marginBottom: "2em"
+  };
+  return (
+    <div style={style}>
+      <ProjectInfo title="fastpack">
+        fastpack is a javascript bundler designed for speed. It's implemented in
+        native ReasonML code.
+      </ProjectInfo>
     </div>
   );
 }
@@ -67,25 +134,24 @@ function Index() {
   return (
     <Page>
       <Logo style={{ margin: "100px auto" }} />
-      <Section href="about" title="Who we are" hrefTitle="Learn more about us">
+      <Section href="about" title="About Us" hrefTitle="Learn more about us">
         <WhoWeAre />
       </Section>
-      <Section
-        href="tech"
-        title="Technology"
-        hrefTitle="read about details behind our technology choice"
-      >
+      <Section href="tech" title="Technology" hrefTitle="Read more about this">
         <Technology />
       </Section>
       <Section
         title="Projects"
         href="projects"
-        hrefTitle="See the full list of what we are working on"
+        hrefTitle="See the full list of projects"
       >
-        <p>TODO</p>
+        <Projects />
       </Section>
-      <Section title="Team" href="people" hrefTitle="Meet the faces">
-        <p>TODO</p>
+      <Section
+        title="People"
+        href="people"
+        hrefTitle="Meet the faces behind arrow"
+      >
       </Section>
     </Page>
   );

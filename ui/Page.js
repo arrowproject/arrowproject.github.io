@@ -16,8 +16,12 @@ function Page(props: { children?: React.Node }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
+        <title>Arrow</title>
       </Head>
       <style global jsx>{`
+        * {
+          box-sizing: border-box;
+        }
         html,
         body {
           margin: 0;
@@ -57,7 +61,7 @@ function Page(props: { children?: React.Node }) {
         }
         @media (min-width: 800px) {
           .wrapper {
-            width: 600px;
+            width: 800px;
             padding: 0em;
           }
         }
