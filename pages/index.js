@@ -1,47 +1,94 @@
 // @flow
 
 import * as React from "react";
+import Link from "next/link";
 import Page from "../ui/Page";
 import Logo from "../ui/Logo";
 import { colors } from "../ui/theme";
+import WhoWeAre from "../content/WhoWeAre.mdx";
+import Technology from "../content/Technology.mdx";
 
-function Header({ children }) {
+function More(props) {
   let style = {
+    display: "inline",
+    fontWeight: "900",
     color: colors.textTitle,
     textTransform: "uppercase",
-    fontSize: "18pt",
-    fontWeight: "900"
+    textAlign: "right",
+    fontSize: "10pt"
   };
-  return <div style={style}>{children}</div>;
-}
-
-function Section({ title, children }) {
-  let style = {};
-  let styleBody = {
-    fontSize: "15pt",
-    fontWeight: "400",
-    marginTop: 20
-  };
+  let title = (props.title || "learn more") + " →";
   return (
     <div style={style}>
-      <Header>{title}</Header>
-      <div style={styleBody}>{children}</div>
+      <Link href={props.href}>{title}</Link>
     </div>
   );
 }
 
-const whatWeDo = `
+function Header({ children, href, title }) {
+  let style = {};
+  let styleText = {
+    display: "inline",
+    fontSize: "28pt",
+    textTransform: "uppercase",
+    color: colors.textTitle,
+    fontWeight: "900"
+  };
+  return (
+    <div style={style}>
+      <div style={styleText}>{children}</div>
+    </div>
+  );
+}
 
-`;
+function Section({ title, children, href, hrefTitle }) {
+  let style = {
+    marginBottom: "4em",
+    padding: 10
+  };
+  let styleBody = {
+    fontSize: "16pt",
+    fontWeight: "500",
+    color: colors.textTitle,
+    marginTop: 20
+  };
+  return (
+    <div style={style}>
+      <Header href={href} title={hrefTitle}>
+        {title}
+      </Header>
+      <div className="content" style={styleBody}>
+        {children}
+      </div>
+      {href && <More href={href} title={hrefTitle} />}
+    </div>
+  );
+}
 
 function Index() {
   return (
     <Page>
       <Logo style={{ margin: "100px auto" }} />
-      <Section title="Who we are"></Section>
-      <Section title="Technology"></Section>
-      <Section title="Projects"></Section>
-      <Section title="Team"></Section>
+      <Section href="about" title="Who we are" hrefTitle="Learn more about us">
+        <WhoWeAre />
+      </Section>
+      <Section
+        href="tech"
+        title="Technology"
+        hrefTitle="read about details behind our technology choice"
+      >
+        <Technology />
+      </Section>
+      <Section
+        title="Projects"
+        href="projects"
+        hrefTitle="See the full list of what we are working on"
+      >
+        <p>TODO</p>
+      </Section>
+      <Section title="Team" href="people" hrefTitle="Meet the faces">
+        <p>TODO</p>
+      </Section>
     </Page>
   );
 }
