@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import Page from "../ui/Page";
+import { Page, Content } from "../ui/Page";
 import Logo from "../ui/Logo";
 import { colors } from "../ui/theme";
 import WhoWeAre from "../content/WhoWeAre.mdx";
@@ -20,7 +20,7 @@ function More(props) {
   let title = (props.title || "learn more") + " →";
   return (
     <div style={style}>
-      <Link href={props.href}>{title}</Link>
+      <Link href={props.href}><a>{title}</a></Link>
     </div>
   );
 }
@@ -57,9 +57,7 @@ function Section({ title, children, href, hrefTitle }) {
       <Header href={href} title={hrefTitle}>
         {title}
       </Header>
-      <div className="content" style={styleBody}>
-        {children}
-      </div>
+      <Content style={styleBody}>{children}</Content>
       {href && <More href={href} title={hrefTitle} />}
     </div>
   );

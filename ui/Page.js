@@ -3,6 +3,8 @@
 import * as React from "react";
 import { colors } from "./theme";
 import Head from "next/head";
+import Logo from "./Logo";
+import Link from "next/link";
 
 function Wrapper({ children }) {
   return <div className="wrapper">{children}</div>;
@@ -26,7 +28,18 @@ function Page(props: { children?: React.Node }) {
         }
 
         .content p {
+          color: ${colors.textTitle};
+          font-size: 14pt;
+          font-weight: 500;
           margin-bottom: 2em;
+        }
+        .content h2,
+        .content h3,
+        .content h4,
+        .content h5 {
+          font-weight: 900;
+          color: ${colors.textTitle};
+          text-transform: uppercase;
         }
 
         a {
@@ -40,12 +53,12 @@ function Page(props: { children?: React.Node }) {
         }
         .wrapper {
           margin: 100px auto;
-					padding: 1em;
+          padding: 1em;
         }
         @media (min-width: 800px) {
           .wrapper {
             width: 600px;
-						padding: 0em;
+            padding: 0em;
           }
         }
       `}</style>
@@ -54,4 +67,57 @@ function Page(props: { children?: React.Node }) {
   );
 }
 
-export default Page;
+function Content(props: { style?: Object, children?: React.Node }) {
+  return (
+    <div className="content" style={props.style}>
+      {props.children}
+    </div>
+  );
+}
+
+function ContentPage(props: { style?: Object, children?: React.Node }) {
+  return (
+    <Page>
+      <div className="header">
+        <style jsx>{`
+          .header {
+            margin-bottom: 5em;
+          }
+        `}</style>
+        <Link href="/">
+          <a>
+            <Logo width={120} />
+          </a>
+        </Link>
+      </div>
+      <Content>{props.children}</Content>
+      <div className="back-container">
+        <style jsx>{`
+          .back-container {
+						margin-top: 3em;
+					}
+          .back {
+            text-transform: uppercase;
+						color: ${colors.textTitle};
+						font-weight: 900;
+						font-size: 12pt;
+          }
+          .back:hover {
+            text-transform: uppercase;
+						background: ${colors.textTitle};
+						color: ${colors.bg};
+						font-weight: 900;
+						font-size: 12pt;
+          }
+        `}</style>
+        <Link href="/">
+          <a className="back">
+            ← Go back
+          </a>
+        </Link>
+      </div>
+    </Page>
+  );
+}
+
+export { Page, ContentPage, Content };
