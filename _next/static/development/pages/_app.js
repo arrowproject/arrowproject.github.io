@@ -65396,7 +65396,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var ui_Style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ui/Style */ "../node_modules/ui/Style.js");
 
-var _jsxFileName = "/Users/andreypopp/Workspace/andreypopp.com/arrow/Logo.js";
+var _jsxFileName = "/Users/andreypopp/Workspace/andreypopp.com/arrowresearch.net/Logo.js";
 
 
 function Logo(props) {

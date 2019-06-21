@@ -9056,10 +9056,10 @@ exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
-/***/ "../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fandreypopp%2FWorkspace%2Fandreypopp.com%2Farrow%2Fpages%2Findex.js!./":
-/*!*******************************************************************************************************************************************************************************************!*\
-  !*** ../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fandreypopp%2FWorkspace%2Fandreypopp.com%2Farrow%2Fpages%2Findex.js ***!
-  \*******************************************************************************************************************************************************************************************/
+/***/ "../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fandreypopp%2FWorkspace%2Fandreypopp.com%2Farrowresearch.net%2Fpages%2Findex.js!./":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fandreypopp%2FWorkspace%2Fandreypopp.com%2Farrowresearch.net%2Fpages%2Findex.js ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -64813,7 +64813,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var ui_Style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ui/Style */ "../node_modules/ui/Style.js");
 
-var _jsxFileName = "/Users/andreypopp/Workspace/andreypopp.com/arrow/Logo.js";
+var _jsxFileName = "/Users/andreypopp/Workspace/andreypopp.com/arrowresearch.net/Logo.js";
 
 
 function Logo(props) {
@@ -64916,7 +64916,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/andreypopp/Workspace/andreypopp.com/arrow/Page.js";
+var _jsxFileName = "/Users/andreypopp/Workspace/andreypopp.com/arrowresearch.net/Page.js";
 
 
 
@@ -65267,7 +65267,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ui_Style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ui/Style */ "../node_modules/ui/Style.js");
 /* harmony import */ var ui_Content__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ui/Content */ "../node_modules/ui/Content.js");
 /* harmony import */ var _Page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Page */ "./Page.js");
-var _jsxFileName = "/Users/andreypopp/Workspace/andreypopp.com/arrow/pages/index.js";
+var _jsxFileName = "/Users/andreypopp/Workspace/andreypopp.com/arrowresearch.net/pages/index.js";
 
 
 
@@ -65373,14 +65373,14 @@ var _jsxFileName = "/Users/andreypopp/Workspace/andreypopp.com/arrow/pages/index
 
 /***/ }),
 
-/***/ 0:
-/*!**********************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fandreypopp%2FWorkspace%2Fandreypopp.com%2Farrow%2Fpages%2Findex.js ***!
-  \**********************************************************************************************************************************************/
+/***/ 1:
+/*!**********************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fandreypopp%2FWorkspace%2Fandreypopp.com%2Farrowresearch.net%2Fpages%2Findex.js ***!
+  \**********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fandreypopp%2FWorkspace%2Fandreypopp.com%2Farrow%2Fpages%2Findex.js! */"../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fandreypopp%2FWorkspace%2Fandreypopp.com%2Farrow%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fandreypopp%2FWorkspace%2Fandreypopp.com%2Farrowresearch.net%2Fpages%2Findex.js! */"../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fandreypopp%2FWorkspace%2Fandreypopp.com%2Farrowresearch.net%2Fpages%2Findex.js!./");
 
 
 /***/ }),
@@ -65396,5 +65396,5 @@ module.exports = dll_fbfdd5333204b8b31297;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
